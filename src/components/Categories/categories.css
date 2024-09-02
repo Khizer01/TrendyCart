@@ -1,0 +1,11 @@
+.categories-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;;
+}
+
+@media (max-width: 1050px){
+    .categories-container{
+        flex-direction: column;
+    }
+}

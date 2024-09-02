@@ -1,0 +1,82 @@
+.filter-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 35px 20px;
+}
+
+.filter-container .filter{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.filter .f-text{
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.productList-container .title{
+    margin: 0 auto;
+    padding-top: 30px;
+    width: fit-content;
+    border-bottom: 2px solid var(--boxShadow-color);
+    color: var(--prussian-blue);
+}
+
+.filter-container .filter select{
+    padding: 7px 17px;
+    border-color: var(--prussian-blue-hover);
+    border-radius: 6px;
+    transition: border 0.3s ease;
+}
+
+.filter-container .filter select:focus{
+    border-color: var(--facebook);
+}
+
+.reset-filter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 5px 40px;
+    color: var(--prussian-blue-hover);
+    transition: all 0.3s ease;
+}
+
+.reset-filter:hover {
+    color: var(--prussian-blue);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px){
+    .filter-container{
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+    .filter{
+        min-width: 258px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 410px){
+    .filter-container .f-text{
+        font-size: 14px;
+    }
+
+    .filter{
+        min-width: unset;
+    }
+
+    .filter-container .filter select {
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 335px) {
+    .products-container {
+        padding: 20px 10px;
+    }
+}

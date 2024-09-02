@@ -1,0 +1,44 @@
+.success-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-container .div{
+    border-radius: 8px;
+    background-color: var(--isabelline);
+    color: var(--prussian-blue);
+    padding: 30px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.success-container .div p {
+    font-size: 22px;
+}
+
+.success-container .div i {
+    color: var(--robin-egg-blue);
+    margin-right: 10px;
+}
+
+.success-container .btn{
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: var(--prussian-blue);
+    color: var(--isabelline);
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;   
+}
+
+.success-container .btn:hover{
+    background-color: var(--prussian-blue-hover);
+}

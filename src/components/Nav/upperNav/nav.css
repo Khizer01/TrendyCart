@@ -1,0 +1,196 @@
+@import '../../../globalColors.css';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    flex-wrap: wrap;
+    box-shadow: 0px 5px 10px 0px var(--boxShadow-color);
+}
+
+.navbar div {
+    flex: 1;
+}
+
+/* Logo Styles */
+.logo {
+    max-height: 3.9rem;
+}
+
+.logo img {
+    width: 70px;
+    height: 65px;
+}
+
+/* Search Container Styles */
+.search-container {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+/* Tabs and Menus Styles */
+.tabs .menus {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: flex-end;
+    z-index: 1000;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.tabs a:hover {
+    color: var(--isabelline);
+    padding: 10px 15px;
+    background-color: var(--prussian-blue-hover);
+    border-radius: 12px;
+    border: 1px solid var(--boxShadow-color);
+}
+
+.tabs .fa-solid {
+    margin-right: 10px;
+}
+
+.tabs .cart .fa-cart-shopping {
+    width: 18px;
+    margin-right: 0;
+    margin-top: 20px;
+}
+
+.tabs .cart:hover {
+    border-radius: 50%;
+    padding: 0 20px;
+}
+
+.tabs .login-button {
+    background-color: var(--prussian-blue);
+    color: var(--isabelline);
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    padding: 10px 15px;
+    background-color: var(--prussian-blue-hover);
+    border-radius: 12px;
+    border: 1px solid var(--boxShadow-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-sign-out-alt {
+    margin-left: 10px;
+}
+
+
+
+
+.menus .num {
+    position: relative;
+    left: 1em;
+    bottom: 2.95em;
+    font-size: 12px;
+    background-color: var(--prussian-blue);
+    color: var(--isabelline);
+    border-radius: 100%;
+    padding: 1px 6px;
+}
+
+
+/* Menu Toggle Styles */
+.tabs .menus {
+    flex: none;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu,
+.cross {
+    display: none;
+    font-size: 24px;
+}
+
+/* Responsive Styles for Medium Screens */
+@media (max-width: 1200px) {
+    .visible {
+        display: flex;
+    }
+
+    .tabs .menus {
+        display: none;
+    }
+
+    .toggle {
+        position: absolute;
+        right: 1em;
+        top: 2.2em;
+    }
+
+    .tabs .show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 6.45em;
+        left: 0;
+        gap: 40px;
+        padding: 35px 25px;
+        width: 100%;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: var(--boxShadow-color);
+        border-bottom: 1px solid var(--boxShadow-color);
+    }
+
+    .searchBox input {
+        width: 50%;
+    }
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        padding: 5px 20px;
+    }
+
+    .navbar .logo {
+        flex: 0 1 auto;
+        padding-left: 20px;
+    }
+
+    .navbar .search-container {
+        flex: 1 1 75%;
+        margin-left: 25px;
+    }
+
+    .tabs .menus,
+    .visible,
+    .tabs .show {
+        display: none;
+    }
+}
+
+/* Responsive Styles for Extra Small Screens */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .navbar .logo {
+        padding: 0;
+        flex: 0 1 auto;
+    }
+
+    .navbar .search-container {
+        flex: 1 1 70%;
+        margin-left: 15px;
+    }
+}

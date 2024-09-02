@@ -1,0 +1,82 @@
+.product {
+  flex: 1;
+  margin: 10px;
+  min-width: 280px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--isabelline);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px var(--boxShadow-color);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product .image {
+  height: 350px;
+}
+
+.product .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.product .info {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--prussian-blue-hover);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+  cursor: pointer;
+}
+
+.product:hover .info {
+  opacity: 1;
+}
+
+.product .info h3 {
+  color: var(--robin-egg-blue);
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.product .info p.price {
+  color: var(--light-orange);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.product .info .button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: var(--robin-egg-blue);
+  border: 2px solid var(--robin-egg-blue);
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: var(--isabelline);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.product .info .button:hover {
+  background-color: var(--robin-egg-blue-hover);
+  color: var(--prussian-blue);
+}

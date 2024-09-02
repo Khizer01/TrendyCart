@@ -1,0 +1,24 @@
+.products-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 55vh;
+}
+
+.error {
+  text-align: center;
+  width: 100%;
+  padding: 10em 10px;
+  background-color: var(--isabelline);
+  border-radius: 8px;
+  color: var(--robin-egg-blue);
+  opacity: 0;
+  animation: fadeInDown 1s forwards;
+}
+
+.products-container .loader {
+  top: 0;
+  position: relative;
+  left: 50%;
+}
